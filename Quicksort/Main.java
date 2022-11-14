@@ -34,8 +34,8 @@ public class Main {
                 left++;
             while (arr[right] > pivot) //조건에 안 맞을 때까지 right 이동하기
                 right--;
-            if (left <= right) {
-                compare_RL(arr, left, right);
+            if (left <= right) { //증가시키고도 엇갈리지 않는지 확인
+                compare_RL(arr, left, right); //두 값 비교 안함 그냥 바꿈
                 left ++; right --;
             }
         }
