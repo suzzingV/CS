@@ -3,19 +3,20 @@
 int BSearch(int arr[], int len, int target) {
     int start = 0;
     int end = len - 1;
-    int mid = (start + end) / 2;
+    int mid;
     int opCount = 0;
 
     while(start <= end) {
+        mid = (start + end) / 2;
         if(arr[mid] == target)
             return mid;
-        else if(arr[mid] <= target)
+        else if(arr[mid] < target)
             end = mid - 1;
         else
             start = mid + 1;
-        opCount ++;
+        opCount++;
     }
-    printf("ë¹„êµì—°ì‚°íšŸìˆ˜: %d \n", opCount);
+    printf("ºñ±³¿¬»êÈ½¼ö: %d \n", opCount);
     return -1;
 }
 
@@ -27,21 +28,21 @@ int main() {
 
     idx = BSearch(arr1, sizeof(arr1) / sizeof(int), 1);
     if(idx == -1)
-        printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
+        printf("Å½»ö½ÇÆĞ \n");
     else
-        printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
+        printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
     
     idx = BSearch(arr2, sizeof(arr2) / sizeof(int), 2);
     if(idx == -1) 
-        printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
+        printf("Å½»ö½ÇÆĞ \n");
     else
-        printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
+        printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
     
     idx = BSearch(arr1, sizeof(arr3) / sizeof(int), 1);
     if(idx == -1)
-        printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
+        printf("Å½»ö ½ÇÆĞ \n");
     else
-        printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
+        printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
 
     return 0;
 }

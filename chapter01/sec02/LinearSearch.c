@@ -15,16 +15,16 @@ int main() {
 
     idx = LSearch(arr, sizeof(arr)/sizeof(int), 4);
     if(idx == -1) {
-        printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
+        printf("Å½»ö ½ÇÆĞ \n");
     }
     else
-        printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
+        printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
     
     idx = LSearch(arr, sizeof(arr)/sizeof(int), 7);
     if(idx == -1) {
-        printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
+        printf("Å½»ö ½ÇÆĞ \n");
     }
     else 
-        printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
+        printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
     return 0;
 }
