@@ -1,11 +1,12 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
+#include "Point.h"
 
 #define TRUE    1
 #define FALSE   0
 
 #define LIST_LEN    100
-typedef int LData; //리스트에 int형 데이터의 저장 위한 선언
+typedef Point *LData; //리스트에 int형 데이터의 저장 위한 선언
 
 typedef struct __ArrayList
 {
