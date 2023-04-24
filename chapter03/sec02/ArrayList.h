@@ -1,7 +1,7 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
-#define TURE    1
+#define TRUE    1
 #define FALSE   0
 
 #define LIST_LEN    100
@@ -20,10 +20,10 @@ typedef ArrayList List; //List에 다른 이름 부여하는 것만으로도 리스트의 종류 바�
 void ListInit(List *plist);
 void LInsert(List *plist, LData pdata);
 
-int LFirst(List *plist, LData pdata);
-int LNext(List *plist, LData pdata);
+int LFirst(List *plist, LData *pdata);
+int LNext(List *plist, LData *pdata);
 
-LData LRemovd(List *plist);
+LData LRemoved(List *plist);
 int LCount(List *plist);
 
 #endif
