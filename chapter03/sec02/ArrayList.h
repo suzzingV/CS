@@ -6,7 +6,7 @@
 #define FALSE   0
 
 #define LIST_LEN    100
-typedef Point *LData; //리스트에 int형 데이터의 저장 위한 선언
+typedef Point* LData; //리스트에 int형 데이터의 저장 위한 선언
 
 typedef struct __ArrayList
 {
@@ -24,7 +24,7 @@ void LInsert(List *plist, LData pdata);
 int LFirst(List *plist, LData *pdata);
 int LNext(List *plist, LData *pdata);
 
-LData LRemoved(List *plist);
+LData LRemove(List *plist);
 int LCount(List *plist);
 
 #endif

@@ -8,10 +8,10 @@ void ListInit(List *plist) {
 
 void LInsert(List *plist, LData pdata)
 {
-    if((plist -> curPosition) >= LIST_LEN) //헤더파일에서 define한 거 그대로 쓸 수 있음
+    if((plist -> numOfData) >= LIST_LEN) //헤더파일에서 define한 거 그대로 쓸 수 있음
         puts("더이상 저장할 공간이 없습니다.");
-    plist -> arr[(plist -> curPosition)] = pdata;
-    (plist -> curPosition) ++;
+    plist -> arr[plist -> numOfData] = pdata;
+    (plist -> numOfData) ++;
 }
 
 int LFirst(List *plist, LData *pdata)
@@ -37,7 +37,7 @@ int LNext(List *plist, LData *pdata)
     return TRUE;
 }
 
-LData LRemoved(List *plist)
+LData LRemove(List *plist)
 {
     LData rdata = plist -> arr[(plist -> curPosition)];
 
@@ -51,7 +51,7 @@ LData LRemoved(List *plist)
     return rdata;
 }
 
-int Lcount(List *plist)
+int LCount(List *plist)
 {
     return plist -> numOfData;
 }
