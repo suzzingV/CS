@@ -78,3 +78,5 @@ public class ObserverPattern {
 		topic.postMessage("amumu is op champion!");
 	}
 }
+
+//topic은 주체이자 객체
